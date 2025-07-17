@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../src/config/firebase";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Github, AlertCircle, Fingerprint } from "lucide-react";
 
 function Login() {
@@ -97,10 +97,10 @@ function Login() {
 
         <p className="mt-6 text-center text-sm text-gray-500">
           Don’t have an account?{" "}
-          <a href="/signup" className="text-blue-600 hover:underline font-medium">
+          <Link to={"/signup"} className="text-blue-600 hover:underline font-medium">
             Sign up
-          </a>
-        </p>
+</Link>       
+ </p>
       </div>
     </div>
   );
